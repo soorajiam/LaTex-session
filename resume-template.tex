@@ -1,0 +1,315 @@
+%-------------------------
+
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underline
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% only for pdflatex
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% TODO EBSERIES
+% sans serif sections
+\titleformat{\section}{
+    \bfseries \vspace{-2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small \textit{#2} } \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-2pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+
+% Add your name here
+    \textbf{\Huge John Doe} \\ \vspace{2pt}
+% Add your link and contact details here
+% make sure to not leave any lines between and it will create a new line
+% start with a horizontal space \hspace{1pt}
+% then select a icon if you want \faEnvelope. Select available icons from https://mirrors.ibiblio.org/CTAN/fonts/fontawesome5/doc/fontawesome5.pdf
+% The \texttt command typesets its argument in teletype font
+% $|$ gives you a vertical separator
+
+    \small \faPhone* \texttt{+91 83939393993} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{johndoe@gmail.com} \hspace{1pt} $|$ 
+    \hspace{1pt} \faLink \hspace{2pt} \href{https://john.com}{\uline{john.com}} \hspace{1pt}  $|$ 
+    \hspace{1pt} \faGithub \hspace{2pt} \href{https://github.com/john}{\uline{john}}  $|$ 
+    \hspace{1pt} \faLinkedin \hspace{2pt} \href{https://www.linkedin.com/in/john/}{\uline{john}}  
+    % \\ \vspace{2pt}
+\end{center}
+
+\section{Career Profile}
+
+% Career profile start
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et scelerisque arcu. Fusce semper fringilla imperdiet. Suspendisse placerat, lacus quis faucibus aliquet, metus ante imperdiet velit, non viverra libero dui at libero. Curabitur a augue id magna faucibus volutpat. Nulla nec tellus id est cursus dapibus in non tortor. Pellentesque fringilla, odio ac ultrices aliquam, nibh ante cursus arcu, in pharetra nulla dolor pulvinar leo. Vivamus a sem ante. In sit amet urna vitae erat placerat tristique sed in felis. Fusce bibendum tempor laoreet. Etiam tempus, arcu a aliquam lacinia, sem urna tincidunt diam, sit amet pharetra ipsum ipsum a augue. Maecenas eget leo sit amet quam condimentum viverra. Integer lobortis rutrum dapibus.
+
+% career profile end
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+  % Copy the following and uncomment to use as experience segments
+  % \resumeSubheading
+  %     {Job Role}
+  %     {Period (2020 - 2024)}
+  %     {Company }
+  %     {Location}
+  %     \resumeItemListStart
+  %       \resumeItem {Achievement / role explained}
+  %       \resumeItem {Achievement / role explained}
+  %   \resumeItemListEnd
+
+   \resumeSubheading
+      {Job Role}
+      {Period (2020 - 2024)}
+      {Company }
+      {Location}
+      \resumeItemListStart
+        \resumeItem {Achievement / role explained}
+        \resumeItem {Achievement / role explained}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%----------- SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+
+ % Copy and uncomment to create a new skill sub section 
+
+  % \item{\textbf{
+  % skill heading } :
+  % Skill 1, skill 2, skill 3
+  % }
+   \item{\textbf{
+  skill heading } :
+  Skill 1, skill 2, skill 3
+  }
+ 
+
+    
+ \end{itemize}
+ \vspace{3pt}
+
+ %-----------EDUCATION-----------
+\section{EDUCATION}
+
+
+
+\resumeSubHeadingListStart
+ % copy and uncomment to add your education details
+%     \resumeSubheading
+%       {Institution}
+%       {start month and year -- graduating month and year (July 2025)}
+%       {Specialization (Electrical engineering)}
+%       {GPA: \textbf{8.9}}
+    
+%         \textit{\myuline{Relavant modules:}} Module 1, module 2 \hspace{2pt}
+%         \textit{\myuline{Project:}} project name
+%       \begin{itemize}
+%           \item {Achievement 1 }
+%           \item {Achievement 2}
+%       \end{itemize}
+    \resumeSubheading
+      {Institution}
+      {start month and year -- graduating month and year (July 2025)}
+      {Specialization (Electrical engineering)}
+      {GPA: \textbf{8.9}}
+    
+        \textbf{Relevant modules:} Module 1, module 2 \hspace{2pt}
+        \textbf{Project:} project name
+      \begin{itemize}
+          \item {Achievement 1 }
+          \item {Achievement 2}
+      \end{itemize}
+
+          \resumeSubheading
+      {Institution}
+      {start month and year -- graduating month and year (July 2025)}
+      {Specialization (Electrical engineering)}
+      {GPA: \textbf{8.9}}
+    
+        \textit{\myuline{Relavant modules:}} Module 1, module 2 \hspace{2pt}
+        \textit{\myuline{Project:}} project name
+      \begin{itemize}
+          \item {Achievement 1 }
+          \item {Achievement 2}
+      \end{itemize}
+\resumeItemListEnd
+ 
+
+
+%-----------PROJECTS-----------
+
+
+\section{PROJECTS}
+
+  \resumeSubHeadingListStart
+ % copy and uncomment to add your project details
+
+  %   \resumeProjectHeading{\textbf{project name } year/ month }{Tools used to build it}
+  %     \resumeItemListStart
+  %       \resumeItem{description about project}
+  %       \resumeItem{fact about project}
+  %     \resumeItemListEnd
+
+      \resumeProjectHeading{\textbf{project name } year/ month }{Tools used to build it}
+      \resumeItemListStart
+        \resumeItem{description about project}
+        \resumeItem{fact about project}
+      \resumeItemListEnd
+
+      \resumeProjectHeading{\textbf{project name } year/ month }{Tools used to build it}
+      \resumeItemListStart
+        \resumeItem{description about project}
+        \resumeItem{fact about project}
+      \resumeItemListEnd
+
+      
+  \resumeSubHeadingListEnd
+
+ %-----------ACHIEVEMENTS-----------
+\section{ACHIEVEMENTS}
+ \begin{itemize}[leftmargin=0in, label={}]
+
+ % copy and uncomment to add new achievements 
+ % \item{ \textbf{Achivement } 
+ % : authority provided or description} 
+
+ \item{ \textbf{Achivement } 
+ : authority provided or description} 
+
+  \item{ \textbf{Achivement } 
+ : authority provided or description} 
+
+    
+ \end{itemize}
+ 
+%-----------LANGUAGES-----------
+\section{LANGUAGES}
+ENGLISH (IELTS 8.5), HINDI, MALAYALAM
+
+%-----------INTERESTS-----------
+\section{INTERESTS}
+\faInstagram \hspace{2pt} \href{https://www.instagram.com/hellskipper/}{\uline{Digital Art}} 
+      \hspace{1cm}Fiction and Stories\hspace{1cm}
+\hspace{1cm}Community management \hspace{1cm}Blogging
+ % --------- References --------
+ \section*{Reference details are available upon request}
+
+%-------------------------------------------
+\end{document}
