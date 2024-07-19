@@ -31,7 +31,7 @@ OPENAI_API_KEY= YOUR KEY
 Change your name in code `main.py` file
 
 
-then create folder `/job/'
+then create folder **/job/** 
 
 you can create sub folders in it as much as you like with the job you are applying for.
 remember the to create subfolder as the 'job name' which will be asked when running the application
@@ -39,10 +39,13 @@ remember the to create subfolder as the 'job name' which will be asked when runn
 then:
 
 Create 
-'/main folder/job/job-you-are-applying-for/job_description.txt`
+**/main folder/job/job-you-are-applying-for/job_description.txt**
 
 and copy the job description to that file.
 
 then run
+```
+python main.py
+```
 
 ### Warning : open ai usage is sometime costly
